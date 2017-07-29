@@ -42,6 +42,7 @@ abstract class ServiceProvider
 
     /**
      * CEFServiceProvider constructor.
+     *
      * @param string $namespace
      */
     public function __construct($namespace = 'deasilworks')
@@ -51,11 +52,11 @@ abstract class ServiceProvider
 
     /**
      * @param Container $container
-     * @param string $serviceKey
+     * @param string    $serviceKey
      */
     protected function populateConfig($serviceKey, Container $container)
     {
-        $config = $container[$this->namespace . '.'. $serviceKey .'.config'];
+        $config = $container[$this->namespace.'.'.$serviceKey.'.config'];
         $configMethods = get_class_methods(get_class($config));
         $converter = new CamelCaseToSnakeCaseNameConverter();
 
@@ -69,7 +70,7 @@ abstract class ServiceProvider
                 continue;
             }
 
-            $configKey = $this->namespace . '.' . $serviceKey .'.' . $matches[1];
+            $configKey = $this->namespace.'.'.$serviceKey.'.'.$matches[1];
 
             if (isset($container[$configKey])) {
                 $config->$method($container[$configKey]);
