@@ -1,4 +1,4 @@
-deasilworks\cfg\ServiceProvider\Silex\ServiceProvider
+deasilworks\CFG\ServiceProvider\Silex\ServiceProvider
 ===============
 
 Class CEFServiceProvider.
@@ -7,7 +7,7 @@ Responsible for providing config population
 
 
 * Class name: ServiceProvider
-* Namespace: deasilworks\cfg\ServiceProvider\Silex
+* Namespace: deasilworks\CFG\ServiceProvider\Silex
 * This is an **abstract** class
 
 
@@ -35,7 +35,7 @@ Methods
 
 ### __construct
 
-    mixed deasilworks\cfg\ServiceProvider\Silex\ServiceProvider::__construct(string $namespace)
+    mixed deasilworks\CFG\ServiceProvider\Silex\ServiceProvider::__construct(string $namespace)
 
 CEFServiceProvider constructor.
 
@@ -51,7 +51,7 @@ CEFServiceProvider constructor.
 
 ### populateConfig
 
-    mixed deasilworks\cfg\ServiceProvider\Silex\ServiceProvider::populateConfig(string $serviceKey, \Pimple\Container $container)
+    mixed deasilworks\CFG\ServiceProvider\Silex\ServiceProvider::populateConfig(string $serviceKey, \Pimple\Container $container)
 
 
 

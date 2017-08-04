@@ -23,7 +23,7 @@
  * SOFTWARE.
  */
 
-namespace deasilworks\cfg\ServiceProvider\Silex;
+namespace deasilworks\CFG\ServiceProvider\Silex;
 
 use Pimple\Container;
 use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;

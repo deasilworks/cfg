@@ -2,10 +2,10 @@ API Index
 =========
 
 * deasilworks
-    * deasilworks\cfg
-        * deasilworks\cfg\ServiceProvider
-            * deasilworks\cfg\ServiceProvider\Silex
-                * [ServiceProvider](deasilworks-cfg-ServiceProvider-Silex-ServiceProvider.md)
+    * deasilworks\CFG
+        * deasilworks\CFG\ServiceProvider
+            * deasilworks\CFG\ServiceProvider\Silex
+                * [ServiceProvider](deasilworks-CFG-ServiceProvider-Silex-ServiceProvider.md)
 
 
 ## LICENSE
