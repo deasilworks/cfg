@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="API Documentation" version="v2.9.0">
+  <partials/>
+  <file path="ServiceProvider.php" generated-path="ServiceProvider.html" hash="219796f7b04fda1170a437723f1d63b9" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Container">\Pimple\Container</namespace-alias>
+    <namespace-alias name="CamelCaseToSnakeCaseNameConverter">\Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter</namespace-alias>
+    <class final="false" abstract="true" namespace="deasilworks\cfg\ServiceProvider\Silex" line="36" package="Default">
+      <extends/>
+      <name>ServiceProvider</name>
+      <full_name>\deasilworks\cfg\ServiceProvider\Silex\ServiceProvider</full_name>
+      <docblock line="36">
+        <description>Class CEFServiceProvider.</description>
+        <long-description>Responsible for providing config population</long-description>
+        <tag name="package" line="36" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="deasilworks\cfg\ServiceProvider\Silex" line="41" package="Default">
+        <name>$namespace</name>
+        <full_name>\deasilworks\cfg\ServiceProvider\Silex\ServiceProvider::namespace</full_name>
+        <default></default>
+        <docblock line="41">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="41" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\cfg\ServiceProvider\Silex" line="48" package="Default">
+        <name>__construct</name>
+        <full_name>\deasilworks\cfg\ServiceProvider\Silex\ServiceProvider::__construct()</full_name>
+        <docblock line="48">
+          <description>CEFServiceProvider constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="48" description="" type="string" variable="$namespace">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$namespace</name>
+          <default>'deasilworks'</default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="deasilworks\cfg\ServiceProvider\Silex" line="57" package="Default">
+        <name>populateConfig</name>
+        <full_name>\deasilworks\cfg\ServiceProvider\Silex\ServiceProvider::populateConfig()</full_name>
+        <docblock line="57">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="57" description="" type="\Pimple\Container" variable="$container">
+            <type>\Pimple\Container</type>
+          </tag>
+          <tag name="param" line="57" description="" type="string" variable="$serviceKey">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$serviceKey</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$container</name>
+          <default></default>
+          <type>\Pimple\Container</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="57" code="PPC:ERR-50014">Name of argument $serviceKey does not match with the DocBlock's name $container in populateConfig()</error>
+      <error line="57" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $serviceKey in populateConfig()</error>
+      <error line="57" code="PPC:ERR-50014">Name of argument $container does not match with the DocBlock's name $serviceKey in populateConfig()</error>
+      <error line="57" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $container in populateConfig()</error>
+      <error line="57" code="PPC:ERR-50008">No summary for method populateConfig()</error>
+      <error line="41" code="PPC:ERR-50007">No summary for property $namespace</error>
+    </parse_markers>
+    <source>eJyFVmFv4kYQ/c6vGEWRgNQXev1Sqbm71jEmWAc2ss2lUZKixSx4G9treU0orfLfO7M2jiE5nRMJ7+zMe/NmZhc+/Z7HeaczuOjABUydECYi4pniuCSLJfN9ITZxCb2oD7/8/PFXGHKmRAK3snhSBjhZVLvOeJEKpYTMQCiIecGXe9gULCv5yoB1wTnINUQxKzbcgFICy/aQ80JhgFyWTGQi2wCDCCkJD53LGJGUXJc7VnD0XwFTSkaCISSsZLRNeVaykijXIuEKemXM4SyoI876mmfFWUKAIgPaPuzCTpSx3JZQcFUWIiIYA52iZLuiTA7biUhFTULhuhqK8BB6q1AKJWxAKldiTZ9c68u3y0So2ICVIPTltkSjIqMur0FqBrIAxROdHIIIFKBFv+ao3Ygop+KWdbkUWXaxTI/1CJ3VeltkSMx12Epi+TTv3zwqyUIRa5kkckcaI5mtBElTv1FsiJtsKZ+51lT1PZMlplzlQe3IX9tcb6mYJQkseV07ZMZKs2NZBeWgShwGwRLIZaFJT+Ve1qMUjm0IvFF4a/o2OAHMfO+bM7SHcGYGuD4z4NYJx948BPTwTTe8A28EpnsHXx13aID958y3gwA8n9Cc6Wzi2Gh2XGsyHzruDVxjqOvhsDs48ogbepqzRnPsgPCmtm+NcWleOxMnvDMIa+SELiGPPB9MmJl+6FjzienDbO7PvMDGJIaI7DruyEcie2q74SUSow3sb7iAYGxOJsRGcOYcZfiUKFje7M53bsYhjL3J0EbjtY35mdcTu2JDddbEdKYGDM2peWPrKA+BtEjyrNKE27FNVmI18d8KHc8lPZbnhj4uDZTrh030rRPYBpi+E1BlRr431UqpuhjkaRwMde0KiCp/3CB0ofU8sBtMGNrmBOECCq61HvypyYNOJ2MpVznD+VnpC2VH98lDtN48BLx4xrmaFfJZrHjxEODR/ueq08HDBjOR5gl/sGRGFwYvrrQ12Kdrme3RnOYywzuBMHDQxL8Y7iIR+j/zosSVhavEYoqHMsjYE6fXI48rugyruy/B2wYse3SS0GFKfcwfh1gsEzpSBeR6vz5Wa7HBMc+3ib45tGSGB6BgeAwjDXyC2vmvA/hobnou4I9nhscGL49sU5sG+hN5SjzNeM7OmyJi1ifRb/OmtBBuG5WSNGi3hitnBUtrthbuMbG+vvCGyfRlCYtFg9h7DYHP0G21tNvXsZU6es7pGvnwpe3f1kEuL2/U1Pk1fYfz6PD6vgQiUpX+r3z/nfo1SupO0RRg43qtSONdzjea6o5/bvncnwq97OJfCxpXVVj38eoUacrxy2elEHDDy4UemEVa2XqNpVc79/vH8dUgY2zGd/DDge/16+HRJR+AFfPoCRoZ8MT3ClJWRnFrtBUvMVRdtgKbVzwLnEUx9E60MAXnlYZ+q3Q6aQ3PSe59qxZVs/hmobd73cFfSLvoXf7UH3SNllKssSxSfdx7BwajAW3Lo0es8beM3GY4swcP+AQfT3Oih4ogsi0/TunlGK9WiQ2l9v+457iuee8/Pr6TG3658rLXnqOG4LH/Xpb1/ocvtfbvxZ6qOH576bx0/gffsg/Y</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="global" full_name="global"/>
+  <namespace name="deasilworks" full_name="deasilworks">
+    <namespace name="cfg" full_name="deasilworks\cfg">
+      <namespace name="ServiceProvider" full_name="deasilworks\cfg\ServiceProvider">
+        <namespace name="Silex" full_name="deasilworks\cfg\ServiceProvider\Silex"/>
+      </namespace>
+    </namespace>
+  </namespace>
+  <deprecated count="0"/>
+</project>
