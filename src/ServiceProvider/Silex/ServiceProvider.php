@@ -51,13 +51,12 @@ abstract class ServiceProvider
     }
 
     /**
-     * @param Container $container
-     * @param string    $serviceKey
+     * @param array $configStore
+     * @param object $serviceConfig
      */
-    protected function populateConfig($serviceKey, Container $container)
+    protected function populateConfig($serviceConfig, $serviceKey, $configStore)
     {
-        $config = $container[$this->namespace.'.'.$serviceKey.'.config'];
-        $configMethods = get_class_methods(get_class($config));
+        $configMethods = get_class_methods($serviceConfig);
         $converter = new CamelCaseToSnakeCaseNameConverter();
 
         // Check container keys matching config setters.
@@ -72,8 +71,8 @@ abstract class ServiceProvider
 
             $configKey = $this->namespace.'.'.$serviceKey.'.'.$matches[1];
 
-            if (isset($container[$configKey])) {
-                $config->$method($container[$configKey]);
+            if (isset($configStore[$configKey])) {
+                $serviceConfig->$method($configStore[$configKey]);
             }
         }
     }

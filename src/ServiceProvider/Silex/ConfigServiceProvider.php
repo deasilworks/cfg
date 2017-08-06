@@ -23,19 +23,12 @@
  * SOFTWARE.
  */
 
-namespace deasilworks\API\ServiceProvider\Silex;
+namespace deasilworks\CFG\ServiceProvider\Silex;
 
-use deasilworks\API\API;
-use deasilworks\API\APIConfig;
-use deasilworks\API\Model\ApiResultModel;
-use deasilworks\API\Model\RestRequestModel;
 use deasilworks\CFG\Config;
-use deasilworks\CFG\ServiceProvider\Silex\ServiceProvider;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
-use Silex\Application;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Silex\Api\BootableProviderInterface;
 
 /**
  * Class APIServiceProvider.
@@ -51,27 +44,17 @@ class ConfigServiceProvider extends ServiceProvider implements ServiceProviderIn
     public function register(Container $container)
     {
         // the config
-        $container[$this->namespace.'.config'] = function ($container) {
-            $configFilesKey = $this->namespace.'.config.files';
+        $container[$this->namespace.'.cfg'] = function ($container) {
 
             $config = new Config();
 
-            if (!isset($container[$configFilesKey])) {
-                $configFiles = $container[$configFilesKey];
+            $files = $container[$this->namespace.'.cfg.load_files'];
 
-                if (!is_array($configFiles)) {
-                    throw new \Exception($configFilesKey . ' must be an array of file paths.');
-                }
-
-                foreach ($configFiles as $configFile) {
-                    $config->loadYamlFile($configFile);
-                }
-
-                // TODO: load config into container
+            foreach ($files as $file) {
+                $config->loadYamlFile($file);
             }
 
             return $config;
         };
-
     }
 }

@@ -45,6 +45,16 @@ class Config
      */
     private $pathStore = [];
 
+
+    /**
+     * Config constructor.
+     */
+    public function __construct()
+    {
+        // defaults
+        $this->set('__DIR__', __DIR__);
+    }
+
     /**
      * Load a YAML file.
      *
@@ -135,6 +145,27 @@ class Config
     private function rebuildPathStore()
     {
         $this->pathStore = $this->pathNodes($this->keyStore);
+
+        // TODO: replace tokens
+        //$this->replaceTokens($this->pathStore);
+
+    }
+
+    /**
+     * @param $store
+     */
+    private function replaceTokens(&$store)
+    {
+        array_walk($store, function (&$value, $key) use ($store) {
+            if (is_string($value)) {
+                return preg_replace_callback('/%(\w+)%/', function ($matches) use (&$store, $key) {
+                    if ($matches[1]) {
+                        $store[$key] = $store[$matches[1]];
+                        echo "replacing: " . $matches[1] . ' with ' .$store[$matches[1]];
+                    }
+                }, $key);
+            }
+        });
     }
 
     /**
