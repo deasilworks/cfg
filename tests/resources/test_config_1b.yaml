@@ -1,0 +1,39 @@
+test:
+  messages:
+    a_message: "This is a test message"
+    another_message: "This is another test message"
+
+  warm:
+    cold:
+      ice: false
+    warmer:
+      getting_hot:
+        hotter:
+          here: true
+
+  test_array:
+    - "Item 1"
+    - "Item 2"
+    - "Item 3"
+
+  test_array_of_hashes:
+    - name: "4klift"
+      location: "http://github.com/deasilworks/4klift"
+    - name: "CEF - 4klift"
+      location: "http://github.com/deasilworks/cef"
+    - name: "API - 4klift"
+      location: "http://github.com/deasilworks/api"
+    - name: "CMS - 4klift"
+      location: "http://github.com/deasilworks/cms"
+
+#  matrix:
+#    -
+#      - "0,0"
+#      - "0,1"
+#      - "0,2"
+#    -
+#      - "1,0"
+#      - "1,1"
+#      - "1,2"
+#
+#  inline_matrix: [ ["0,0", "0,1", "0,2"], ["1,0", "1,1", "1,2"] ]

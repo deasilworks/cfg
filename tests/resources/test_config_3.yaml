@@ -1,0 +1,9 @@
+test:
+  messages:
+    new_message: "This is a new message"
+
+  test_array_of_hashes:
+    - name: "4klift Project"
+      location: "http://github.com/deasilworks/4klift"
+    - name: "CEF - 4klift Component"
+      location: "http://github.com/deasilworks/cef"

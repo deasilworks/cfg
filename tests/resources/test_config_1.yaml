@@ -1,0 +1,6 @@
+test:
+  root_path: '%kernel.root_dir%'
+  path: "/here/"
+  messages:
+    a_message: "This is a test message"
+    another_message: "This is another test message"
