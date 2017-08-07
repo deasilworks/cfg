@@ -29,6 +29,7 @@ use deasilworks\CFG\Config;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 use Silex\Api\BootableProviderInterface;
+use Silex\Application;
 
 /**
  * Class APIServiceProvider.
@@ -36,7 +37,7 @@ use Silex\Api\BootableProviderInterface;
  * Responsible for providing API as a service to
  * the applications built on the Silex framework.
  */
-class ConfigServiceProvider extends ServiceProvider implements ServiceProviderInterface
+class CFGServiceProvider extends ServiceProvider implements ServiceProviderInterface, BootableProviderInterface
 {
     /**
      * @param Container $container
@@ -54,7 +55,29 @@ class ConfigServiceProvider extends ServiceProvider implements ServiceProviderIn
                 $config->loadYamlFile($file);
             }
 
+            $appRoot = $container[$this->namespace.'.cfg.app_root'];
+            if ($appRoot) {
+                $config->set('app_root', $appRoot);
+            }
+
             return $config;
         };
     }
+
+    /**
+     * @param Application $app
+     */
+    public function boot(Application $app)
+    {
+        // populate app container if the configuration has an app key
+        $config = $app[$this->namespace.'.cfg'];
+        $appConfig = $config->get('app');
+        if (is_array($appConfig)) {
+            foreach ($appConfig as $item => $value) {
+                $app[$item] = $value;
+            }
+        }
+
+    }
+
 }
