@@ -46,7 +46,6 @@ class CFGServiceProvider extends ServiceProvider implements ServiceProviderInter
     {
         // the config
         $container[$this->namespace.'.cfg'] = function ($container) {
-
             $config = new Config();
 
             $files = $container[$this->namespace.'.cfg.load_files'];
@@ -77,7 +76,5 @@ class CFGServiceProvider extends ServiceProvider implements ServiceProviderInter
                 $app[$item] = $value;
             }
         }
-
     }
-
 }

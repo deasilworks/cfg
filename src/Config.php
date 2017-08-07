@@ -27,7 +27,6 @@ namespace deasilworks\CFG;
 
 use Symfony\Component\Yaml\Yaml;
 
-
 /**
  * Class CEFServiceProvider.
  *
@@ -60,9 +59,10 @@ class Config
     }
 
     /**
-     * Load YAML
+     * Load YAML.
      *
      * @param $yaml
+     *
      * @return $this
      */
     public function loadYaml($yaml)
@@ -85,7 +85,8 @@ class Config
 
     /**
      * @param string $pathKey
-     * @param mixed $default
+     * @param mixed  $default
+     *
      * @return mixed
      */
     public function get($pathKey, $default = null)
@@ -96,6 +97,7 @@ class Config
     /**
      * @param $keyPath
      * @param $value
+     *
      * @return $this
      */
     public function set($keyPath, $value)
@@ -114,6 +116,7 @@ class Config
 
         if (count($keyPathArray) > 0) {
             $this->setPath($keyStoreLocation[$key], $keyPathArray, $value);
+
             return;
         }
 
@@ -122,6 +125,7 @@ class Config
 
     /**
      * @param $pathKey
+     *
      * @return bool
      */
     public function has($pathKey)
@@ -146,7 +150,6 @@ class Config
     private function replaceTokens(&$store)
     {
         array_walk_recursive($store, function (&$value, $key) use ($store) {
-
             if (is_string($value)) {
                 $value = preg_replace_callback(
                     '/%(\w+)%/',
@@ -154,20 +157,22 @@ class Config
                         if ($matches[1] && isset($store[$matches[1]])) {
                             return $store[$matches[1]];
                         }
+
                         return $matches[0];
                     },
                     $value
                 );
             }
-
         });
     }
 
     /**
      * @param $keyStore
+     *
      * @return array
      */
-    private function pathNodes($keyStore) {
+    private function pathNodes($keyStore)
+    {
         $out = [];
         $this->pathNestedNodes($out, '', $keyStore);
 
@@ -182,12 +187,12 @@ class Config
     private function pathNestedNodes(&$out, $key, $input)
     {
         foreach ($input as $myKey => $value) {
-            if ( is_array($value) ) {
-                $this->pathNestedNodes($out, $key . $myKey . '.', $value);
+            if (is_array($value)) {
+                $this->pathNestedNodes($out, $key.$myKey.'.', $value);
             }
 
             if (!is_numeric($myKey)) {
-                $out[$key . $myKey] = $value;
+                $out[$key.$myKey] = $value;
             }
         }
     }

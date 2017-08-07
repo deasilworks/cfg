@@ -51,7 +51,7 @@ abstract class ServiceProvider
     }
 
     /**
-     * @param array $configStore
+     * @param array  $configStore
      * @param object $serviceConfig
      */
     protected function populateConfig($serviceConfig, $serviceKey, $configStore)
