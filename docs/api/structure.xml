@@ -1,7 +1,272 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="API Documentation" version="v2.9.0">
   <partials/>
-  <file path="ServiceProvider.php" generated-path="ServiceProvider.html" hash="7bb12cd20e397d677daba82ffc4a4444" package="Default">
+  <file path="Config.php" generated-path="Config.html" hash="2e64523e4f5cd5a1f55cf4db42bb9443" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Yaml">\Symfony\Component\Yaml\Yaml</namespace-alias>
+    <class final="false" abstract="false" namespace="deasilworks\CFG" line="35" package="Default">
+      <extends/>
+      <name>Config</name>
+      <full_name>\deasilworks\CFG\Config</full_name>
+      <docblock line="35">
+        <description>Class CEFServiceProvider.</description>
+        <long-description>Responsible for providing config population</long-description>
+        <tag name="package" line="35" description="Default"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="deasilworks\CFG" line="40" package="Default">
+        <name>$keyStore</name>
+        <full_name>\deasilworks\CFG\Config::keyStore</full_name>
+        <default>array()</default>
+        <docblock line="40">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="40" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="deasilworks\CFG" line="45" package="Default">
+        <name>$pathStore</name>
+        <full_name>\deasilworks\CFG\Config::pathStore</full_name>
+        <default>array()</default>
+        <docblock line="45">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="45" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="54" package="Default">
+        <name>loadYamlFile</name>
+        <full_name>\deasilworks\CFG\Config::loadYamlFile()</full_name>
+        <docblock line="54">
+          <description>Load a YAML file.</description>
+          <long-description></long-description>
+          <tag name="param" line="54" description="" type="" variable="$filePath"/>
+          <tag name="return" line="54" description="" type="\deasilworks\CFG\Config">
+            <type>\deasilworks\CFG\Config</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$filePath</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="68" package="Default">
+        <name>loadYaml</name>
+        <full_name>\deasilworks\CFG\Config::loadYaml()</full_name>
+        <docblock line="68">
+          <description>Load YAML.</description>
+          <long-description></long-description>
+          <tag name="param" line="68" description="" type="" variable="$yaml"/>
+          <tag name="return" line="68" description="" type="\deasilworks\CFG\Config">
+            <type>\deasilworks\CFG\Config</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$yaml</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="81" package="Default">
+        <name>getAll</name>
+        <full_name>\deasilworks\CFG\Config::getAll()</full_name>
+        <docblock line="81">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="81" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="92" package="Default">
+        <name>get</name>
+        <full_name>\deasilworks\CFG\Config::get()</full_name>
+        <docblock line="92">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="92" description="" type="string" variable="$pathKey">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="92" description="" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="92" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$pathKey</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="103" package="Default">
+        <name>set</name>
+        <full_name>\deasilworks\CFG\Config::set()</full_name>
+        <docblock line="103">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="103" description="" type="" variable="$keyPath"/>
+          <tag name="param" line="103" description="" type="" variable="$value"/>
+          <tag name="return" line="103" description="" type="\deasilworks\CFG\Config">
+            <type>\deasilworks\CFG\Config</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$keyPath</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="113" package="Default">
+        <name>setPath</name>
+        <full_name>\deasilworks\CFG\Config::setPath()</full_name>
+        <docblock line="113">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="true">
+          <name>$keyStoreLocation</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="true">
+          <name>$keyPathArray</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="131" package="Default">
+        <name>has</name>
+        <full_name>\deasilworks\CFG\Config::has()</full_name>
+        <docblock line="131">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="131" description="" type="" variable="$pathKey"/>
+          <tag name="return" line="131" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$pathKey</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="139" package="Default">
+        <name>rebuildPathStore</name>
+        <full_name>\deasilworks\CFG\Config::rebuildPathStore()</full_name>
+        <docblock line="139">
+          <description>Rebuild the path store.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="150" package="Default">
+        <name>replaceTokens</name>
+        <full_name>\deasilworks\CFG\Config::replaceTokens()</full_name>
+        <docblock line="150">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="150" description="" type="" variable="$store"/>
+        </docblock>
+        <argument line="0" by_reference="true">
+          <name>$store</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="174" package="Default">
+        <name>pathNodes</name>
+        <full_name>\deasilworks\CFG\Config::pathNodes()</full_name>
+        <docblock line="174">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="174" description="" type="" variable="$keyStore"/>
+          <tag name="return" line="174" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$keyStore</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="187" package="Default">
+        <name>pathNestedNodes</name>
+        <full_name>\deasilworks\CFG\Config::pathNestedNodes()</full_name>
+        <docblock line="187">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="187" description="" type="" variable="$out"/>
+          <tag name="param" line="187" description="" type="" variable="$key"/>
+          <tag name="param" line="187" description="" type="" variable="$input"/>
+        </docblock>
+        <argument line="0" by_reference="true">
+          <name>$out</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$input</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <markers>
+      <todo line="143">replace tokens</todo>
+    </markers>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="81" code="PPC:ERR-50008">No summary for method getAll()</error>
+      <error line="92" code="PPC:ERR-50008">No summary for method get()</error>
+      <error line="103" code="PPC:ERR-50008">No summary for method set()</error>
+      <error line="113" code="PPC:ERR-50015">Argument $keyStoreLocation is missing from the Docblock of setPath</error>
+      <error line="113" code="PPC:ERR-50015">Argument $keyPathArray is missing from the Docblock of setPath</error>
+      <error line="113" code="PPC:ERR-50015">Argument $value is missing from the Docblock of setPath</error>
+      <error line="113" code="PPC:ERR-50008">No summary for method setPath()</error>
+      <error line="131" code="PPC:ERR-50008">No summary for method has()</error>
+      <error line="150" code="PPC:ERR-50008">No summary for method replaceTokens()</error>
+      <error line="174" code="PPC:ERR-50008">No summary for method pathNodes()</error>
+      <error line="187" code="PPC:ERR-50008">No summary for method pathNestedNodes()</error>
+      <error line="40" code="PPC:ERR-50007">No summary for property $keyStore</error>
+      <error line="45" code="PPC:ERR-50007">No summary for property $pathStore</error>
+    </parse_markers>
+    <source>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</source>
+  </file>
+  <file path="ServiceProvider/Silex/ServiceProvider.php" generated-path="ServiceProvider.Silex.ServiceProvider.html" hash="928bd68c8012b4121f4871110c87e068" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -52,35 +317,165 @@
         <docblock line="57">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="57" description="" type="\Pimple\Container" variable="$container">
-            <type>\Pimple\Container</type>
+          <tag name="param" line="57" description="" type="array" variable="$configStore">
+            <type>array</type>
           </tag>
-          <tag name="param" line="57" description="" type="string" variable="$serviceKey">
-            <type>string</type>
+          <tag name="param" line="57" description="" type="object" variable="$serviceConfig">
+            <type>object</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
+          <name>$serviceConfig</name>
+          <default></default>
+          <type>object</type>
+        </argument>
+        <argument line="0" by_reference="false">
           <name>$serviceKey</name>
           <default></default>
-          <type>string</type>
+          <type/>
         </argument>
+        <argument line="0" by_reference="false">
+          <name>$configStore</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="57" code="PPC:ERR-50014">Name of argument $serviceConfig does not match with the DocBlock's name $configStore in populateConfig()</error>
+      <error line="57" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $serviceConfig in populateConfig()</error>
+      <error line="57" code="PPC:ERR-50014">Name of argument $serviceKey does not match with the DocBlock's name $serviceConfig in populateConfig()</error>
+      <error line="57" code="PPC:ERR-50015">Argument $configStore is missing from the Docblock of populateConfig</error>
+      <error line="57" code="PPC:ERR-50014">Name of argument $configStore does not match with the DocBlock's name $serviceConfig in populateConfig()</error>
+      <error line="57" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $configStore in populateConfig()</error>
+      <error line="57" code="PPC:ERR-50008">No summary for method populateConfig()</error>
+      <error line="41" code="PPC:ERR-50007">No summary for property $namespace</error>
+    </parse_markers>
+    <source>eJyFVmFv4kYQ/c6vGEWRAqkv9PqlUnO91jEmWAc2ss2lUZKixSx4G9tr7ZpQWuW/d2ZtiCF3qhMJ7+zMe/NmZwc+/VamZafTv+zAJUy8GMYi4YXmuCSLI8udEuu0gm7Sg59+/PgzDDjTIoM7qZ61BV6RNK5TrnKhtZAFCA0pV3yxg7ViRcWXFqwU5yBXkKRMrbkFlQRW7KDkSmOAXFRMFKJYA4MEKQkPnasUkbRcVVumOPovgWktE8EQEpYy2eS8qFhFlCuRcQ3dKuVwFjURZz3Ds+QsI0BRAG3vd2ErqlRuKlBcV0okBGOhU5JtlpTJfjsTuWhIKNxUQxMeQm80SqGELcjlUqzokxt95WaRCZ1asBSEvthUaNRkNOW1SE1fKtA8M8khiEABRvRbjsaNiEoqbtWUS5Nlm8r8WI8wWa02qkBibsKWEstneP/iSUUWiljJLJNb0pjIYilImv6FYmPcZAv5wo2m+twLWWHKdR50HOXbMTdbOmVZBgve1A6ZsdLsWJaiHHSFzSBYBqVUhvRU7lXTSvHIhSgYxnd26IIXwTQMvnoDdwBndoTrMwvuvHgUzGJAj9D243sIhmD79/DF8wcWuH9MQzeKIAgJzZtMx56LZs93xrOB59/CDYb6ATa7hy2PuHFgOBs0z40Ib+KGzgiX9o039uJ7i7CGXuwT8jAIwYapHcaeMxvbIUxn4TSIXExigMi+5w9DJHInrh9fITHawP2KC4hG9nhMbARnz1BGSImCE0zvQ+92FMMoGA9cNN64mJ99M3ZrNlTnjG1vYsHAnti3rokKEMiIJM86TbgbuWQlVhv/ndgLfNLjBH4c4tJCuWF8iL7zItcCO/QiqswwDCZGKVUXgwKDg6G+WwNR5Y8PCF1oPYvcAyYMXHuMcBEFN1r3/nTI/U6nYDnXJcP+WZqBsqV58ugMbx8jrl6wr6ZKvoglV48RXu2/rzsdvGwwFXmZ8UdHFjQwuLo21miXr2SxQ3NeygJnAmFgo4l/MNxHIvR/4arClYOrzGGaxzIq2DOn1yOPaxqG9ezLcNqA4w5PEtp3aYj5YxOLRUZXSkFp9ptrtRJrbPNyk5nJYSQzvACK4TVMDPAJauffDuBjuOm5hN9fGF4bHB7FujH1zSfyVHib8Z6dH4qIWZ9Ev8+b0kK4TVJJ0mDcDlwlUyxv2Fq4x8RmfOGEKcywhPn8gNh9C4Ff4aJ1pBc9E1uro+ecxsiHz23/tg5yeX2npsmPKcV2CFEXOEIh/MRD1pPuXNfaHeP4nfIdhDQH1Xh3j4OtA9gXjvO9zf1OWr034fjNsdQobM2ruTnteV7bTrB710exdQdiXMG38L+d2u01p25q1Qcn5ckzHXJ9NeCZ7zTkrErSVk9qXmGovmoFHl6xiTlLUuie6GAazuv8ey2xJmkDz0nqw9P10Vap+HputrsX/T+Rdt69+qHXv7BaSrELpMrNPe3uGawDaFsePWKFP0LkpsBm23vAJ/h4mhM9VARRbPhxSq/HeI1KPFVqwZOuvLrAv9bB1+uG9+Hj0zdyw29FXnXb/fHwRvHU+1aex93w4XNThO+DnAo6fnvtvHb+A9Mr/h0=</source>
+  </file>
+  <file path="ServiceProvider/Silex/CFGServiceProvider.php" generated-path="ServiceProvider.Silex.CFGServiceProvider.html" hash="0c295a4d73220186474403bcd1ae966f" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Config">\deasilworks\CFG\Config</namespace-alias>
+    <namespace-alias name="Container">\Pimple\Container</namespace-alias>
+    <namespace-alias name="ServiceProviderInterface">\Pimple\ServiceProviderInterface</namespace-alias>
+    <namespace-alias name="BootableProviderInterface">\Silex\Api\BootableProviderInterface</namespace-alias>
+    <namespace-alias name="Application">\Silex\Application</namespace-alias>
+    <class final="false" abstract="false" namespace="deasilworks\CFG\ServiceProvider\Silex" line="40" package="Default">
+      <extends>\deasilworks\CFG\ServiceProvider\Silex\ServiceProvider</extends>
+      <implements>\Pimple\ServiceProviderInterface</implements>
+      <implements>\Silex\Api\BootableProviderInterface</implements>
+      <name>CFGServiceProvider</name>
+      <full_name>\deasilworks\CFG\ServiceProvider\Silex\CFGServiceProvider</full_name>
+      <docblock line="40">
+        <description>Class APIServiceProvider.</description>
+        <long-description>Responsible for providing API as a service to
+the applications built on the Silex framework.</long-description>
+        <tag name="package" line="40" description="Default"/>
+        <tag name="inherited_from" description="\deasilworks\CFG\ServiceProvider\Silex\ServiceProvider" refers="\deasilworks\CFG\ServiceProvider\Silex\ServiceProvider" link="/classes/deasilworks.CFG.ServiceProvider.Silex.ServiceProvider.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="deasilworks\CFG\ServiceProvider\Silex" line="41" package="Default">
+        <name>$namespace</name>
+        <full_name>\deasilworks\CFG\ServiceProvider\Silex\ServiceProvider::namespace</full_name>
+        <default></default>
+        <docblock line="41">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="41" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG\ServiceProvider\Silex" line="45" package="Default">
+        <name>register</name>
+        <full_name>\deasilworks\CFG\ServiceProvider\Silex\CFGServiceProvider::register()</full_name>
+        <docblock line="45">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="45" description="" type="\Pimple\Container" variable="$container">
+            <type>\Pimple\Container</type>
+          </tag>
+        </docblock>
         <argument line="0" by_reference="false">
           <name>$container</name>
           <default></default>
           <type>\Pimple\Container</type>
         </argument>
       </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG\ServiceProvider\Silex" line="69" package="Default">
+        <name>boot</name>
+        <full_name>\deasilworks\CFG\ServiceProvider\Silex\CFGServiceProvider::boot()</full_name>
+        <docblock line="69">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="69" description="" type="\Silex\Application" variable="$app">
+            <type>\Silex\Application</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$app</name>
+          <default></default>
+          <type>\Silex\Application</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG\ServiceProvider\Silex" line="48" package="Default">
+        <name>__construct</name>
+        <full_name>\deasilworks\CFG\ServiceProvider\Silex\ServiceProvider::__construct()</full_name>
+        <docblock line="48">
+          <description>CEFServiceProvider constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="48" description="" type="string" variable="$namespace">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$namespace</name>
+          <default>'deasilworks'</default>
+          <type>string</type>
+        </argument>
+        <inherited_from>\deasilworks\CFG\ServiceProvider\Silex\ServiceProvider</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="deasilworks\CFG\ServiceProvider\Silex" line="57" package="Default">
+        <name>populateConfig</name>
+        <full_name>\deasilworks\CFG\ServiceProvider\Silex\ServiceProvider::populateConfig()</full_name>
+        <docblock line="57">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="57" description="" type="array" variable="$configStore">
+            <type>array</type>
+          </tag>
+          <tag name="param" line="57" description="" type="object" variable="$serviceConfig">
+            <type>object</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$serviceConfig</name>
+          <default></default>
+          <type>object</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$serviceKey</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$configStore</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\deasilworks\CFG\ServiceProvider\Silex\ServiceProvider</inherited_from>
+      </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="57" code="PPC:ERR-50014">Name of argument $serviceKey does not match with the DocBlock's name $container in populateConfig()</error>
-      <error line="57" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $serviceKey in populateConfig()</error>
-      <error line="57" code="PPC:ERR-50014">Name of argument $container does not match with the DocBlock's name $serviceKey in populateConfig()</error>
-      <error line="57" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $container in populateConfig()</error>
-      <error line="57" code="PPC:ERR-50008">No summary for method populateConfig()</error>
-      <error line="41" code="PPC:ERR-50007">No summary for property $namespace</error>
+      <error line="45" code="PPC:ERR-50008">No summary for method register()</error>
+      <error line="69" code="PPC:ERR-50008">No summary for method boot()</error>
     </parse_markers>
-    <source>eJyFVmFv4kYQ/c6vGEWRgNQXev1Sqbm71jEmWAc2ss2lUZKixSx4G9treU0orfLfO7M2jiE5nRMJ7+zMe/NmZhc+/Z7HeaczuOjABUydECYi4pniuCSLJfN9ITZxCb2oD7/8/PFXGHKmRAK3snhSBjhZVLvOeJEKpYTMQCiIecGXe9gULCv5yoB1wTnINUQxKzbcgFICy/aQ80JhgFyWTGQi2wCDCCkJD53LGJGUXJc7VnD0XwFTSkaCISSsZLRNeVaykijXIuEKemXM4SyoI876mmfFWUKAIgPaPuzCTpSx3JZQcFUWIiIYA52iZLuiTA7biUhFTULhuhqK8BB6q1AKJWxAKldiTZ9c68u3y0So2ICVIPTltkSjIqMur0FqBrIAxROdHIIIFKBFv+ao3Ygop+KWdbkUWXaxTI/1CJ3VeltkSMx12Epi+TTv3zwqyUIRa5kkckcaI5mtBElTv1FsiJtsKZ+51lT1PZMlplzlQe3IX9tcb6mYJQkseV07ZMZKs2NZBeWgShwGwRLIZaFJT+Ve1qMUjm0IvFF4a/o2OAHMfO+bM7SHcGYGuD4z4NYJx948BPTwTTe8A28EpnsHXx13aID958y3gwA8n9Cc6Wzi2Gh2XGsyHzruDVxjqOvhsDs48ogbepqzRnPsgPCmtm+NcWleOxMnvDMIa+SELiGPPB9MmJl+6FjzienDbO7PvMDGJIaI7DruyEcie2q74SUSow3sb7iAYGxOJsRGcOYcZfiUKFje7M53bsYhjL3J0EbjtY35mdcTu2JDddbEdKYGDM2peWPrKA+BtEjyrNKE27FNVmI18d8KHc8lPZbnhj4uDZTrh030rRPYBpi+E1BlRr431UqpuhjkaRwMde0KiCp/3CB0ofU8sBtMGNrmBOECCq61HvypyYNOJ2MpVznD+VnpC2VH98mDNbp5CHjxjHM1K+SzWPHiIcCj/c9Vp4OHDWYizRP+YMmMLgxeXGlrsE/XMtujOc1lhncCYeCgiX8x3EUi9H/mRYkrC1eJxRQPZZCxJ06vRx5XdBlWd1+Ctw1Y9ugkocOU+pg/DrFYJnSkCsj1fn2s1mKDY55vE31zaMkMD0DB8BhGGvgEtfNfB/DR3PRcwB/PDI8NXh7ZpjYN9CfylHia8ZydN0XErE+i3+ZNaSHcNioladBuDVfOCpbWbC3cY2J9feENk+nLEhaLBrH3GgKfodtqabevYyt19JzTNfLhS9u/rYNcXt6oqfNr+g7n0eH1fQlEpCr9X/n+O/VrlNSdoinAxvVakca7nG801R3/3PK5PxV62cW/FjSuqrDu49Up0pTjl89KIeCGlws9MIu0svUaS6927veP46tBxtiM7+CHA9/r18OjSz4AK+bREzQy4InvFaSsjOLWaCteYqi6bAU2r3gWOIti6J1oYQrOKw39Vul00hqek9z7Vi2qZvHNQm/3uoO/kHbRu/ypP+gaLaVYY1mk+rj3DgxGA9qWR49Y428Zuc1wZg8e8Ak+nuZEDxVBZFt+nNLLMV6tEhtK7f9xz3Fd895/fHwnN/xy5WWvPUcNwWP/vSzr/Q9fau3fiz1Vcfz20nnp/A/QtA94</source>
+    <source>eJyNVu9P40YQ/Z6/YoSQCMgHbb9UKoXWJA5ZXWJHtjmKyum0sTfx9hyvtbshhyr+986snZ9wXCOk2Ltv3nszOzvh9z/qou50Ls46cAZjlsJIZqIyAl9ppafqZy3nhYVudgq//PTzr9AX3MgS7pX+ajxgVdZCJ0IvpDFSVSANFEKL6TPMNa+syD2YaSFAzSAruJ4LD6wCXj1DLbTBADW1XFaymgOHDCWJD8G2QCajZnbFtUB8DtwYlUmOlJCrbLkQleWWJGeyFAa6thBwlLQRR6dOJxe8JEJZAW2vd2ElbaGWFrQwVsuMaDwEZeUyJyfr7VIuZCtC4a4ahviQemkwFTLswULlckbfwuVXL6elNIUHuST26dLioqFFV16PsrlQGowonTkkkZiAS3rr0cFIqKbi2rZchlZWhVrs5yOdq9lSVygsXFiusHxO9x+RWVqhiJkqS7WiHDNV5ZJSM79RbIqbfKqehMupOfdKWbTc+KDjqLfH3G6ZgpclTEVbO1TGSvP9tDR5MBabQfISaqWd6GG6520rpcMAkmiQ3vtxACyBSRx9Yv2gD0d+gu9HHtyzdBjdpYCI2A/TB4gG4IcP8JGFfQ+CvyZxkCQQxcTGxpMRC3CZhb3RXZ+Ft3CDoWGEzc6w5ZE3jZxmy8aChPjGQdwb4qt/w0YsffCIa8DSkJgHUQw+TPw4Zb27kR/D5C6eREmAJvrIHLJwEKNQMA7C9ByFcQ2CT/gCydAfjUiN6Pw7TCMmo9CLJg8xux2mMIxG/QAXbwL059+MgkYNs+uNfDb2oO+P/dvARUVI5JIkZGMT7ocBrZKqj3+9lEUh5dOLwjTGVw/TjdNN9D1LAg/8mCVUmUEcjV2mVF0MihwPhoZBQ0SV3z8ghND7XRJsOKEf+COkSyi4zXWNp0O+6HQqvhCm5tg/uRsoK5onj73B7WMi9BP21USrJ5kL/Zjg1f522engZXuF7alqJueXbm8iF3UpaImGidB7qwekDKeSnqF6A3ISj34tH2+Usnxa/ghY4z12M+GSZmczKkscTuBP2IHUuqljTBd7XiI53kANtdunW4gxONhw9JkmEu+pmy90G7dKBqZLWVpo55BzgmMVy0jlaKqaOQ9YmAMPIL5ZUeUGDtddcWiKvtraJO7Bd2vS+bcD+HEFoM8Z/FlzdASbM4DjbP3YQi7ctxuPGQ6rys1dnMFznJNCd9+KPHUhjZbTu3AVyNzZb1a3+L+PaVJ9uN602PnJeTabn3yGq61id4d/h3vNhMyIrsQKmhbrnuJJ74GaX5yrH+uel4rnXxz85PMBCzaC4FmBbho6bAP3dGhpx9aHa+J74ItygMAmEM3tIl8OrGIXxXiG/8ssYr9oBJPVXRI5Q5Mt0bvujLDdkw2Lt1F/36MWFn+41ixb6Evz2KJfd9rOVXRK73bZFG10DyPe6K5a1csS/8mg6webilEJtn231A1FQTe3csiv4nmvG5seIo3vduQ2UYL1NjHrYs7bYp7sVI9OQpovXGv+3N2GnR6eyra3ttTUX9KKBVxdw/ETL5dvd5qzTDi6Mg3u8PT2n146L53/ADoFIQc=</source>
   </file>
   <package name="Default" full_name="Default"/>
   <package name="global" full_name="global"/>

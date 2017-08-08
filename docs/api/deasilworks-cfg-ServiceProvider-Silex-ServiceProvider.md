@@ -51,7 +51,7 @@ CEFServiceProvider constructor.
 
 ### populateConfig
 
-    mixed deasilworks\CFG\ServiceProvider\Silex\ServiceProvider::populateConfig(string $serviceKey, \Pimple\Container $container)
+    mixed deasilworks\CFG\ServiceProvider\Silex\ServiceProvider::populateConfig(object $serviceConfig, $serviceKey, array $configStore)
 
 
 
@@ -61,8 +61,9 @@ CEFServiceProvider constructor.
 
 
 #### Arguments
-* $serviceKey **string**
-* $container **Pimple\Container**
+* $serviceConfig **object**
+* $serviceKey **mixed**
+* $configStore **array**
 
 
 
