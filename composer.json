@@ -40,14 +40,14 @@
     "symfony/http-kernel": "^3.1"
   },
   "autoload": {
-    "psr-4": { "deasilworks\\cfg\\": "src/" },
+    "psr-4": { "deasilworks\\CFG\\": "src/" },
     "exclude-from-classmap": [
       "/tests/"
     ]
   },
   "autoload-dev": {
     "psr-4": {
-      "deasilworks\\cfg\\test\\": "tests/src/deasilworks/cfg/test"
+      "deasilworks\\CFG\\test\\": "tests/src/deasilworks/cfg/test"
     }
   },
   "minimum-stability": "dev"
