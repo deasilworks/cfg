@@ -61,6 +61,8 @@ class Config
     /**
      * Load YAML.
      *
+     * @SuppressWarnings(PHPMD)
+     *
      * @param $yaml
      *
      * @return $this
@@ -149,11 +151,11 @@ class Config
      */
     private function replaceTokens(&$store)
     {
-        array_walk_recursive($store, function (&$value, $key) use ($store) {
+        array_walk_recursive($store, function (&$value) use ($store) {
             if (is_string($value)) {
                 $value = preg_replace_callback(
                     '/%(\w+)%/',
-                    function ($matches) use ($store, $key) {
+                    function ($matches) use ($store) {
                         if ($matches[1] && isset($store[$matches[1]])) {
                             return $store[$matches[1]];
                         }
