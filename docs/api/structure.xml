@@ -1,272 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="API Documentation" version="v2.9.0">
   <partials/>
-  <file path="Config.php" generated-path="Config.html" hash="dd9d4deb28576d1413404c00d830256e" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <namespace-alias name="Yaml">\Symfony\Component\Yaml\Yaml</namespace-alias>
-    <class final="false" abstract="false" namespace="deasilworks\CFG" line="35" package="Default">
-      <extends/>
-      <name>Config</name>
-      <full_name>\deasilworks\CFG\Config</full_name>
-      <docblock line="35">
-        <description>Class CEFServiceProvider.</description>
-        <long-description>Responsible for providing config population</long-description>
-        <tag name="package" line="35" description="Default"/>
-      </docblock>
-      <property static="false" visibility="private" namespace="deasilworks\CFG" line="40" package="Default">
-        <name>$keyStore</name>
-        <full_name>\deasilworks\CFG\Config::keyStore</full_name>
-        <default>array()</default>
-        <docblock line="40">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="40" description="" type="array" variable="">
-            <type>array</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="deasilworks\CFG" line="45" package="Default">
-        <name>$pathStore</name>
-        <full_name>\deasilworks\CFG\Config::pathStore</full_name>
-        <default>array()</default>
-        <docblock line="45">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="45" description="" type="array" variable="">
-            <type>array</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="54" package="Default">
-        <name>loadYamlFile</name>
-        <full_name>\deasilworks\CFG\Config::loadYamlFile()</full_name>
-        <docblock line="54">
-          <description>Load a YAML file.</description>
-          <long-description></long-description>
-          <tag name="param" line="54" description="" type="" variable="$filePath"/>
-          <tag name="return" line="54" description="" type="\deasilworks\CFG\Config">
-            <type>\deasilworks\CFG\Config</type>
-          </tag>
-          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$filePath</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="70" package="Default">
-        <name>loadYaml</name>
-        <full_name>\deasilworks\CFG\Config::loadYaml()</full_name>
-        <docblock line="70">
-          <description>Load YAML.</description>
-          <long-description></long-description>
-          <tag name="SuppressWarnings" line="70" description="(PHPMD)"/>
-          <tag name="param" line="70" description="" type="" variable="$yaml"/>
-          <tag name="return" line="70" description="" type="\deasilworks\CFG\Config">
-            <type>\deasilworks\CFG\Config</type>
-          </tag>
-          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$yaml</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="83" package="Default">
-        <name>getAll</name>
-        <full_name>\deasilworks\CFG\Config::getAll()</full_name>
-        <docblock line="83">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="83" description="" type="array">
-            <type>array</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="94" package="Default">
-        <name>get</name>
-        <full_name>\deasilworks\CFG\Config::get()</full_name>
-        <docblock line="94">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="94" description="" type="string" variable="$pathKey">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="94" description="" type="mixed" variable="$default">
-            <type>mixed</type>
-          </tag>
-          <tag name="return" line="94" description="" type="mixed">
-            <type>mixed</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$pathKey</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$default</name>
-          <default>null</default>
-          <type>mixed</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="105" package="Default">
-        <name>set</name>
-        <full_name>\deasilworks\CFG\Config::set()</full_name>
-        <docblock line="105">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="105" description="" type="" variable="$keyPath"/>
-          <tag name="param" line="105" description="" type="" variable="$value"/>
-          <tag name="return" line="105" description="" type="\deasilworks\CFG\Config">
-            <type>\deasilworks\CFG\Config</type>
-          </tag>
-          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$keyPath</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$value</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="115" package="Default">
-        <name>setPath</name>
-        <full_name>\deasilworks\CFG\Config::setPath()</full_name>
-        <docblock line="115">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="true">
-          <name>$keyStoreLocation</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="true">
-          <name>$keyPathArray</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$value</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="133" package="Default">
-        <name>has</name>
-        <full_name>\deasilworks\CFG\Config::has()</full_name>
-        <docblock line="133">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="133" description="" type="" variable="$pathKey"/>
-          <tag name="return" line="133" description="" type="boolean">
-            <type>boolean</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$pathKey</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="141" package="Default">
-        <name>rebuildPathStore</name>
-        <full_name>\deasilworks\CFG\Config::rebuildPathStore()</full_name>
-        <docblock line="141">
-          <description>Rebuild the path store.</description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="152" package="Default">
-        <name>replaceTokens</name>
-        <full_name>\deasilworks\CFG\Config::replaceTokens()</full_name>
-        <docblock line="152">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="152" description="" type="" variable="$store"/>
-        </docblock>
-        <argument line="0" by_reference="true">
-          <name>$store</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="176" package="Default">
-        <name>pathNodes</name>
-        <full_name>\deasilworks\CFG\Config::pathNodes()</full_name>
-        <docblock line="176">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="176" description="" type="" variable="$keyStore"/>
-          <tag name="return" line="176" description="" type="array">
-            <type>array</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$keyStore</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="189" package="Default">
-        <name>pathNestedNodes</name>
-        <full_name>\deasilworks\CFG\Config::pathNestedNodes()</full_name>
-        <docblock line="189">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="189" description="" type="" variable="$out"/>
-          <tag name="param" line="189" description="" type="" variable="$key"/>
-          <tag name="param" line="189" description="" type="" variable="$input"/>
-        </docblock>
-        <argument line="0" by_reference="true">
-          <name>$out</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$key</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$input</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-    </class>
-    <markers>
-      <todo line="145">replace tokens</todo>
-    </markers>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="83" code="PPC:ERR-50008">No summary for method getAll()</error>
-      <error line="94" code="PPC:ERR-50008">No summary for method get()</error>
-      <error line="105" code="PPC:ERR-50008">No summary for method set()</error>
-      <error line="115" code="PPC:ERR-50015">Argument $keyStoreLocation is missing from the Docblock of setPath</error>
-      <error line="115" code="PPC:ERR-50015">Argument $keyPathArray is missing from the Docblock of setPath</error>
-      <error line="115" code="PPC:ERR-50015">Argument $value is missing from the Docblock of setPath</error>
-      <error line="115" code="PPC:ERR-50008">No summary for method setPath()</error>
-      <error line="133" code="PPC:ERR-50008">No summary for method has()</error>
-      <error line="152" code="PPC:ERR-50008">No summary for method replaceTokens()</error>
-      <error line="176" code="PPC:ERR-50008">No summary for method pathNodes()</error>
-      <error line="189" code="PPC:ERR-50008">No summary for method pathNestedNodes()</error>
-      <error line="40" code="PPC:ERR-50007">No summary for property $keyStore</error>
-      <error line="45" code="PPC:ERR-50007">No summary for property $pathStore</error>
-    </parse_markers>
-    <source>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</source>
-  </file>
   <file path="ServiceProvider/Silex/ServiceProvider.php" generated-path="ServiceProvider.Silex.ServiceProvider.html" hash="928bd68c8012b4121f4871110c87e068" package="Default">
     <docblock line="0">
       <description></description>
@@ -355,13 +89,13 @@
     </parse_markers>
     <source>eJyFVmFv4kYQ/c6vGEWRAqkv9PqlUnO91jEmWAc2ss2lUZKixSx4G9tr7ZpQWuW/d2ZtiCF3qhMJ7+zMe/NmZwc+/VamZafTv+zAJUy8GMYi4YXmuCSLI8udEuu0gm7Sg59+/PgzDDjTIoM7qZ61BV6RNK5TrnKhtZAFCA0pV3yxg7ViRcWXFqwU5yBXkKRMrbkFlQRW7KDkSmOAXFRMFKJYA4MEKQkPnasUkbRcVVumOPovgWktE8EQEpYy2eS8qFhFlCuRcQ3dKuVwFjURZz3Ds+QsI0BRAG3vd2ErqlRuKlBcV0okBGOhU5JtlpTJfjsTuWhIKNxUQxMeQm80SqGELcjlUqzokxt95WaRCZ1asBSEvthUaNRkNOW1SE1fKtA8M8khiEABRvRbjsaNiEoqbtWUS5Nlm8r8WI8wWa02qkBibsKWEstneP/iSUUWiljJLJNb0pjIYilImv6FYmPcZAv5wo2m+twLWWHKdR50HOXbMTdbOmVZBgve1A6ZsdLsWJaiHHSFzSBYBqVUhvRU7lXTSvHIhSgYxnd26IIXwTQMvnoDdwBndoTrMwvuvHgUzGJAj9D243sIhmD79/DF8wcWuH9MQzeKIAgJzZtMx56LZs93xrOB59/CDYb6ATa7hy2PuHFgOBs0z40Ib+KGzgiX9o039uJ7i7CGXuwT8jAIwYapHcaeMxvbIUxn4TSIXExigMi+5w9DJHInrh9fITHawP2KC4hG9nhMbARnz1BGSImCE0zvQ+92FMMoGA9cNN64mJ99M3ZrNlTnjG1vYsHAnti3rokKEMiIJM86TbgbuWQlVhv/ndgLfNLjBH4c4tJCuWF8iL7zItcCO/QiqswwDCZGKVUXgwKDg6G+WwNR5Y8PCF1oPYvcAyYMXHuMcBEFN1r3/nTI/U6nYDnXJcP+WZqBsqV58ugMbx8jrl6wr6ZKvoglV48RXu2/rzsdvGwwFXmZ8UdHFjQwuLo21miXr2SxQ3NeygJnAmFgo4l/MNxHIvR/4arClYOrzGGaxzIq2DOn1yOPaxqG9ezLcNqA4w5PEtp3aYj5YxOLRUZXSkFp9ptrtRJrbPNyk5nJYSQzvACK4TVMDPAJauffDuBjuOm5hN9fGF4bHB7FujH1zSfyVHib8Z6dH4qIWZ9Ev8+b0kK4TVJJ0mDcDlwlUyxv2Fq4x8RmfOGEKcywhPn8gNh9C4Ff4aJ1pBc9E1uro+ecxsiHz23/tg5yeX2npsmPKcV2CFEXOEIh/MRD1pPuXNfaHeP4nfIdhDQH1Xh3j4OtA9gXjvO9zf1OWr034fjNsdQobM2ruTnteV7bTrB710exdQdiXMG38L+d2u01p25q1Qcn5ckzHXJ9NeCZ7zTkrErSVk9qXmGovmoFHl6xiTlLUuie6GAazuv8ey2xJmkDz0nqw9P10Vap+HputrsX/T+Rdt69+qHXv7BaSrELpMrNPe3uGawDaFsePWKFP0LkpsBm23vAJ/h4mhM9VARRbPhxSq/HeI1KPFVqwZOuvLrAv9bB1+uG9+Hj0zdyw29FXnXb/fHwRvHU+1aex93w4XNThO+DnAo6fnvtvHb+A9Mr/h0=</source>
   </file>
-  <file path="ServiceProvider/Silex/CFGServiceProvider.php" generated-path="ServiceProvider.Silex.CFGServiceProvider.html" hash="0c295a4d73220186474403bcd1ae966f" package="Default">
+  <file path="ServiceProvider/Silex/CFGServiceProvider.php" generated-path="ServiceProvider.Silex.CFGServiceProvider.html" hash="0177ee6b83ce0f7176c276d3852ce5fc" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <namespace-alias name="Config">\deasilworks\CFG\Config</namespace-alias>
+    <namespace-alias name="CFG">\deasilworks\CFG\CFG</namespace-alias>
     <namespace-alias name="Container">\Pimple\Container</namespace-alias>
     <namespace-alias name="ServiceProviderInterface">\Pimple\ServiceProviderInterface</namespace-alias>
     <namespace-alias name="BootableProviderInterface">\Silex\Api\BootableProviderInterface</namespace-alias>
@@ -476,7 +210,273 @@ the applications built on the Silex framework.</long-description>
       <error line="45" code="PPC:ERR-50008">No summary for method register()</error>
       <error line="69" code="PPC:ERR-50008">No summary for method boot()</error>
     </parse_markers>
-    <source>eJyNVu9P40YQ/Z6/YoSQCMgHbb9UKoXWJA5ZXWJHtjmKyum0sTfx9hyvtbshhyr+986snZ9wXCOk2Ltv3nszOzvh9z/qou50Ls46cAZjlsJIZqIyAl9ppafqZy3nhYVudgq//PTzr9AX3MgS7pX+ajxgVdZCJ0IvpDFSVSANFEKL6TPMNa+syD2YaSFAzSAruJ4LD6wCXj1DLbTBADW1XFaymgOHDCWJD8G2QCajZnbFtUB8DtwYlUmOlJCrbLkQleWWJGeyFAa6thBwlLQRR6dOJxe8JEJZAW2vd2ElbaGWFrQwVsuMaDwEZeUyJyfr7VIuZCtC4a4ahviQemkwFTLswULlckbfwuVXL6elNIUHuST26dLioqFFV16PsrlQGowonTkkkZiAS3rr0cFIqKbi2rZchlZWhVrs5yOdq9lSVygsXFiusHxO9x+RWVqhiJkqS7WiHDNV5ZJSM79RbIqbfKqehMupOfdKWbTc+KDjqLfH3G6ZgpclTEVbO1TGSvP9tDR5MBabQfISaqWd6GG6520rpcMAkmiQ3vtxACyBSRx9Yv2gD0d+gu9HHtyzdBjdpYCI2A/TB4gG4IcP8JGFfQ+CvyZxkCQQxcTGxpMRC3CZhb3RXZ+Ft3CDoWGEzc6w5ZE3jZxmy8aChPjGQdwb4qt/w0YsffCIa8DSkJgHUQw+TPw4Zb27kR/D5C6eREmAJvrIHLJwEKNQMA7C9ByFcQ2CT/gCydAfjUiN6Pw7TCMmo9CLJg8xux2mMIxG/QAXbwL059+MgkYNs+uNfDb2oO+P/dvARUVI5JIkZGMT7ocBrZKqj3+9lEUh5dOLwjTGVw/TjdNN9D1LAg/8mCVUmUEcjV2mVF0MihwPhoZBQ0SV3z8ghND7XRJsOKEf+COkSyi4zXWNp0O+6HQqvhCm5tg/uRsoK5onj73B7WMi9BP21USrJ5kL/Zjg1f522engZXuF7alqJueXbm8iF3UpaImGidB7qwekDKeSnqF6A3ISj34tH2+Usnxa/ghY4z12M+GSZmczKkscTuBP2IHUuqljTBd7XiI53kANtdunW4gxONhw9JkmEu+pmy90G7dKBqZLWVpo55BzgmMVy0jlaKqaOQ9YmAMPIL5ZUeUGDtddcWiKvtraJO7Bd2vS+bcD+HEFoM8Z/FlzdASbM4DjbP3YQi7ctxuPGQ6rys1dnMFznJNCd9+KPHUhjZbTu3AVyNzZb1a3+L+PaVJ9uN602PnJeTabn3yGq61id4d/h3vNhMyIrsQKmhbrnuJJ74GaX5yrH+uel4rnXxz85PMBCzaC4FmBbho6bAP3dGhpx9aHa+J74ItygMAmEM3tIl8OrGIXxXiG/8ssYr9oBJPVXRI5Q5Mt0bvujLDdkw2Lt1F/36MWFn+41ixb6Evz2KJfd9rOVXRK73bZFG10DyPe6K5a1csS/8mg6webilEJtn231A1FQTe3csiv4nmvG5seIo3vduQ2UYL1NjHrYs7bYp7sVI9OQpovXGv+3N2GnR6eyra3ttTUX9KKBVxdw/ETL5dvd5qzTDi6Mg3u8PT2n146L53/ADoFIQc=</source>
+    <source>eJyNVu9P40YQ/Z6/YoSQCMgHbb9UKoXWJA5ZnWNHtnMUNafTxt7E23O81q5DDlX8751ZOz/huCJQ7N03772ZnZ3w+x9VXnU6VxcduIARS8CXqSiNwFda6anqWctFXkM3PYdffvr5V+gLbmQBD0p/NQ6wMm2hY6GX0hipSpAGcqHF7BkWmpe1yByYayFAzSHNuV4IB2oFvHyGSmiDAWpWc1nKcgEcUpQkPgTXOTIZNa/XXAvEZ8CNUankSAmZSldLUda8Jsm5LISBbp0LOInbiJNzq5MJXhChLIG2N7uwlnWuVjVoYWotU6JxEJQWq4ycbLYLuZStCIXbahjiQ+qVwVTIsANLlck5fQqbX7WaFdLkDmSS2GerGhcNLdryOpTNldJgRGHNIYnEBGzSO48WRkIVFbduy2VoZZ2r5WE+0rqar3SJwsKGZQrLZ3X/EWlNKxQxV0Wh1pRjqspMUmrmN4pNcJPP1JOwOTXnXqoaLTc+6Diq3TG3WybnRQEz0dYOlbHS/DAtTR5Mjc0geQGV0lb0ON3LtpWSoQdxOEge3MgDFsM4Cj+xvteHEzfG9xMHHlgyDCcJICJyg+QRwgG4wSN8ZEHfAe+vceTFMYQRsbHR2GceLrOg50/6LLiHOwwNQmx2hi2PvEloNVs25sXEN/Ki3hBf3Tvms+TRIa4BSwJiHoQRuDB2o4T1Jr4bwXgSjcPYQxN9ZA5YMIhQyBt5QXKJwrgG3id8gXjo+j6pEZ07wTQiMgq9cPwYsfthAsPQ73u4eOehP/fO9xo1zK7nu2zkQN8dufeejQqRyCZJyMYmPAw9WiVVF397CQsDyqcXBkmErw6mGyXb6AcWew64EYupMoMoHNlMqboYFFoeDA28hogqf3hACKH3SextOaHvuT7SxRTc5rrB0yFfdTolXwpTceyfzA6UNc2TaW9wP42FfsK+Gmv1JDOhpzFe7W/XnQ5etldY/Lu2G2O5rAox7amSJonQB6tHjAxHkp6jdAOy/FO3ktM7pWo+K34ErPAS24FwTYOzmZMFTiZwx+xIatPREeaKDS+RHK+fhsru0xXEGJxqOPdME4mX1A4Xuoo7JQOzlSxqaIeQdYIzFWtItWhKmloPWJEjDyC+1aLMDByv2+LQCH21tU3cge/WpPNvB/DHFoB+LuDPiqMj2J4BnKabxxZyZT/tbExxUpV26OIAXuCQFLr7VuS5DWm0rN6VrQDuz+Viu7rD/31KY+rD7ba/Ls8u0/ni7DPc7BS7e/x73BsmZEZ0KdZUze45HvMBovmuufmx6GWhePbFws8+H7FgFwie5milocMesE/HfvY8fbglvke+LAYIbALR3D7y5cgqtlCEB/i/zCL2i0YwWd0nkXM02RK9686Iunu2ZXG26u971KLGr6wNyw760jy26NdttncPrdK7LTZDG93jiDdaq1LVqsB/L+juwbZiVIJd0610Q5HTtS0t8qt4PmjFpoFI47vtuEuUYL1tzKaYi7aYZ3vVo5OQ5gvXmj93d2Hnx6ey660dNfWXrMUSbm7h9IkXq7c7zVomHN2XBnd8eodPL52Xzn+6Vx37</source>
+  </file>
+  <file path="CFG.php" generated-path="CFG.html" hash="ec941441fb3bca5c29682ad32210a9d1" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Yaml">\Symfony\Component\Yaml\Yaml</namespace-alias>
+    <class final="false" abstract="false" namespace="deasilworks\CFG" line="35" package="Default">
+      <extends/>
+      <name>CFG</name>
+      <full_name>\deasilworks\CFG\CFG</full_name>
+      <docblock line="35">
+        <description>Class CFG.</description>
+        <long-description>Responsible for providing configuration</long-description>
+        <tag name="package" line="35" description="Default"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="deasilworks\CFG" line="40" package="Default">
+        <name>$keyStore</name>
+        <full_name>\deasilworks\CFG\CFG::keyStore</full_name>
+        <default>array()</default>
+        <docblock line="40">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="40" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="deasilworks\CFG" line="45" package="Default">
+        <name>$pathStore</name>
+        <full_name>\deasilworks\CFG\CFG::pathStore</full_name>
+        <default>array()</default>
+        <docblock line="45">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="45" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="54" package="Default">
+        <name>loadYamlFile</name>
+        <full_name>\deasilworks\CFG\CFG::loadYamlFile()</full_name>
+        <docblock line="54">
+          <description>Load a YAML file.</description>
+          <long-description></long-description>
+          <tag name="param" line="54" description="" type="" variable="$filePath"/>
+          <tag name="return" line="54" description="" type="\deasilworks\CFG\CFG">
+            <type>\deasilworks\CFG\CFG</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$filePath</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="70" package="Default">
+        <name>loadYaml</name>
+        <full_name>\deasilworks\CFG\CFG::loadYaml()</full_name>
+        <docblock line="70">
+          <description>Load YAML.</description>
+          <long-description></long-description>
+          <tag name="SuppressWarnings" line="70" description="(PHPMD)"/>
+          <tag name="param" line="70" description="" type="" variable="$yaml"/>
+          <tag name="return" line="70" description="" type="\deasilworks\CFG\CFG">
+            <type>\deasilworks\CFG\CFG</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$yaml</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="83" package="Default">
+        <name>getAll</name>
+        <full_name>\deasilworks\CFG\CFG::getAll()</full_name>
+        <docblock line="83">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="83" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="94" package="Default">
+        <name>get</name>
+        <full_name>\deasilworks\CFG\CFG::get()</full_name>
+        <docblock line="94">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="94" description="" type="string" variable="$pathKey">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="94" description="" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="94" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$pathKey</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="105" package="Default">
+        <name>set</name>
+        <full_name>\deasilworks\CFG\CFG::set()</full_name>
+        <docblock line="105">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="105" description="" type="" variable="$keyPath"/>
+          <tag name="param" line="105" description="" type="" variable="$value"/>
+          <tag name="return" line="105" description="" type="\deasilworks\CFG\CFG">
+            <type>\deasilworks\CFG\CFG</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$keyPath</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="115" package="Default">
+        <name>setPath</name>
+        <full_name>\deasilworks\CFG\CFG::setPath()</full_name>
+        <docblock line="115">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="true">
+          <name>$keyStoreLocation</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="true">
+          <name>$keyPathArray</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="deasilworks\CFG" line="133" package="Default">
+        <name>has</name>
+        <full_name>\deasilworks\CFG\CFG::has()</full_name>
+        <docblock line="133">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="133" description="" type="" variable="$pathKey"/>
+          <tag name="return" line="133" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$pathKey</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="141" package="Default">
+        <name>rebuildPathStore</name>
+        <full_name>\deasilworks\CFG\CFG::rebuildPathStore()</full_name>
+        <docblock line="141">
+          <description>Rebuild the path store.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="152" package="Default">
+        <name>replaceTokens</name>
+        <full_name>\deasilworks\CFG\CFG::replaceTokens()</full_name>
+        <docblock line="152">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="152" description="" type="" variable="$store"/>
+        </docblock>
+        <argument line="0" by_reference="true">
+          <name>$store</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="176" package="Default">
+        <name>pathNodes</name>
+        <full_name>\deasilworks\CFG\CFG::pathNodes()</full_name>
+        <docblock line="176">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="176" description="" type="" variable="$keyStore"/>
+          <tag name="return" line="176" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$keyStore</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="deasilworks\CFG" line="189" package="Default">
+        <name>pathNestedNodes</name>
+        <full_name>\deasilworks\CFG\CFG::pathNestedNodes()</full_name>
+        <docblock line="189">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="189" description="" type="" variable="$out"/>
+          <tag name="param" line="189" description="" type="" variable="$key"/>
+          <tag name="param" line="189" description="" type="" variable="$input"/>
+        </docblock>
+        <argument line="0" by_reference="true">
+          <name>$out</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$input</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <markers>
+      <todo line="145">replace tokens</todo>
+    </markers>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="83" code="PPC:ERR-50008">No summary for method getAll()</error>
+      <error line="94" code="PPC:ERR-50008">No summary for method get()</error>
+      <error line="105" code="PPC:ERR-50008">No summary for method set()</error>
+      <error line="115" code="PPC:ERR-50015">Argument $keyStoreLocation is missing from the Docblock of setPath</error>
+      <error line="115" code="PPC:ERR-50015">Argument $keyPathArray is missing from the Docblock of setPath</error>
+      <error line="115" code="PPC:ERR-50015">Argument $value is missing from the Docblock of setPath</error>
+      <error line="115" code="PPC:ERR-50008">No summary for method setPath()</error>
+      <error line="133" code="PPC:ERR-50008">No summary for method has()</error>
+      <error line="152" code="PPC:ERR-50008">No summary for method replaceTokens()</error>
+      <error line="176" code="PPC:ERR-50008">No summary for method pathNodes()</error>
+      <error line="189" code="PPC:ERR-50008">No summary for method pathNestedNodes()</error>
+      <error line="40" code="PPC:ERR-50007">No summary for property $keyStore</error>
+      <error line="45" code="PPC:ERR-50007">No summary for property $pathStore</error>
+    </parse_markers>
+    <source>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</source>
   </file>
   <package name="Default" full_name="Default"/>
   <package name="global" full_name="global"/>

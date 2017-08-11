@@ -3,11 +3,11 @@ API Index
 
 * deasilworks
     * deasilworks\CFG
-        * [Config](deasilworks-CFG-Config.md)
         * deasilworks\CFG\ServiceProvider
             * deasilworks\CFG\ServiceProvider\Silex
                 * [ServiceProvider](deasilworks-CFG-ServiceProvider-Silex-ServiceProvider.md)
                 * [CFGServiceProvider](deasilworks-CFG-ServiceProvider-Silex-CFGServiceProvider.md)
+        * [CFG](deasilworks-CFG-CFG.md)
 
 
 ## LICENSE
