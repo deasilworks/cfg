@@ -28,11 +28,11 @@ namespace deasilworks\CFG;
 use Symfony\Component\Yaml\Yaml;
 
 /**
- * Class CEFServiceProvider.
+ * Class CFG.
  *
- * Responsible for providing config population
+ * Responsible for providing configuration
  */
-class Config
+class CFG
 {
     /**
      * @var array

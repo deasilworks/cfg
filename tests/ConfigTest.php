@@ -23,7 +23,7 @@
  * SOFTWARE.
  */
 
-use deasilworks\CFG\Config;
+use deasilworks\CFG\CFG;
 
 /**
  * Class ConfigTest.
@@ -40,7 +40,7 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
         $yaml2 = __DIR__.'/resources/test_config_2.yaml';
         $yaml3 = __DIR__.'/resources/test_config_3.yaml';
 
-        $config = new Config();
+        $config = new CFG();
         $config
             ->loadYamlFile($yaml1)
             ->loadYamlFile($yaml1b)
@@ -86,7 +86,7 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 
     public function testConfigKeyStore()
     {
-        $config = new Config();
+        $config = new CFG();
         $config->set('agency.location.city.los_angeles', true);
         $config->set('agency.location.city.london', false);
 

@@ -25,7 +25,7 @@
 
 namespace deasilworks\CFG\ServiceProvider\Silex;
 
-use deasilworks\CFG\Config;
+use deasilworks\CFG\CFG;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 use Silex\Api\BootableProviderInterface;
@@ -46,7 +46,7 @@ class CFGServiceProvider extends ServiceProvider implements ServiceProviderInter
     {
         // the config
         $container[$this->namespace.'.cfg'] = function ($container) {
-            $config = new Config();
+            $config = new CFG();
 
             $files = $container[$this->namespace.'.cfg.load_files'];
 
