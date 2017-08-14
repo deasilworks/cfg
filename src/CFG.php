@@ -53,7 +53,9 @@ class CFG
      */
     public function loadYamlFile($filePath)
     {
-        $this->loadYaml(file_get_contents($filePath));
+        if(file_exists($filePath)) {
+            $this->loadYaml(file_get_contents($filePath));
+        }
 
         return $this;
     }
@@ -93,7 +95,7 @@ class CFG
      */
     public function get($pathKey, $default = null)
     {
-        return $this->pathStore[$pathKey] ? $this->pathStore[$pathKey] : $default;
+        return isset($this->pathStore[$pathKey]) ? $this->pathStore[$pathKey] : $default;
     }
 
     /**
