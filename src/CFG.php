@@ -53,7 +53,7 @@ class CFG
      */
     public function loadYamlFile($filePath)
     {
-        if(file_exists($filePath)) {
+        if (file_exists($filePath)) {
             $this->loadYaml(file_get_contents($filePath));
         }
 
