@@ -25,10 +25,9 @@
 
 namespace deasilworks\CFG;
 
-use Monolog\Handler\StreamHandler;
-use Symfony\Component\Yaml\Yaml;
-use Monolog\Logger;
 use Monolog\Handler\ErrorLogHandler;
+use Monolog\Logger;
+use Symfony\Component\Yaml\Yaml;
 
 /**
  * Class CFG.
@@ -48,21 +47,21 @@ class CFG
     private $pathStore = [];
 
     /**
-     * @var Array
+     * @var array
      */
     private $loggers = [];
 
     /**
      * @return Logger
      */
-    public function getLogger($channel=self::class)
+    public function getLogger($channel = self::class)
     {
         if (!$this->loggers[$channel]) {
-
             $this->loggers[$channel] = new Logger($channel);
 
             if ($this->get('deasilworks.cfg.log_debug')) {
                 $this->loggers[$channel]->pushHandler(new ErrorLogHandler(ErrorLogHandler::OPERATING_SYSTEM, Logger::DEBUG));
+
                 return $this->loggers[$channel];
             }
 
@@ -83,11 +82,13 @@ class CFG
     {
         if (file_exists($filePath)) {
             $this->loadYaml(file_get_contents($filePath));
-            $this->getLogger()->addDebug('Loading File: ' . $filePath);
+            $this->getLogger()->addDebug('Loading File: '.$filePath);
+
             return $this;
         }
 
-        $this->getLogger()->addError('File does not exist: ' . $filePath);
+        $this->getLogger()->addError('File does not exist: '.$filePath);
+
         return $this;
     }
 
