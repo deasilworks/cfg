@@ -176,7 +176,6 @@ class CFG
     {
         $this->pathStore = $this->pathNodes($this->keyStore);
 
-        // TODO: replace tokens
         $this->replaceTokens($this->pathStore);
     }
 
