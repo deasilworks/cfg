@@ -52,10 +52,14 @@ class CFG
     private $loggers = [];
 
     /**
+     * @param $channel string
+     *
      * @return Logger
      */
     public function getLogger($channel = self::class)
     {
+        $channel = (string) $channel;
+
         if (!$this->loggers[$channel]) {
             $this->loggers[$channel] = new Logger($channel);
 
