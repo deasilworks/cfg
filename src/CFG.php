@@ -25,8 +25,10 @@
 
 namespace deasilworks\CFG;
 
-use Monolog\Handler\ErrorLogHandler;
+use Monolog\Formatter\JsonFormatter;
+use Monolog\Handler\NullHandler;
 use Monolog\Logger;
+use Predis;
 use Symfony\Component\Yaml\Yaml;
 
 /**
@@ -51,6 +53,7 @@ class CFG
      */
     private $loggers = [];
 
+
     /**
      * @param $channel string
      *
@@ -61,15 +64,15 @@ class CFG
         $channel = (string) $channel;
 
         if (!$this->loggers[$channel]) {
+            $level = $this->get('deasilworks.cfg.log_debug') ? Logger::DEBUG : Logger::WARNING;
+
+            $redisHandler = new NullHandler($level);
+
+//            $formatter = new JsonFormatter('4klift');
+//            $redisHandler->setFormatter($formatter);
+
             $this->loggers[$channel] = new Logger($channel);
-
-            if ($this->get('deasilworks.cfg.log_debug')) {
-                $this->loggers[$channel]->pushHandler(new ErrorLogHandler(ErrorLogHandler::OPERATING_SYSTEM, Logger::DEBUG));
-
-                return $this->loggers[$channel];
-            }
-
-            $this->loggers[$channel]->pushHandler(new ErrorLogHandler(ErrorLogHandler::OPERATING_SYSTEM, Logger::WARNING));
+            $this->loggers[$channel]->pushHandler($redisHandler);
         }
 
         return $this->loggers[$channel];
@@ -86,12 +89,8 @@ class CFG
     {
         if (file_exists($filePath)) {
             $this->loadYaml(file_get_contents($filePath));
-            $this->getLogger()->addDebug('Loading File: '.$filePath);
-
             return $this;
         }
-
-        $this->getLogger()->addError('File does not exist: '.$filePath);
 
         return $this;
     }
