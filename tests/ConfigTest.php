@@ -31,7 +31,7 @@ use deasilworks\CFG\CFG;
  * @SuppressWarnings(PHPMD)
  * We do bad things here and we like it.
  */
-class ConfigTest extends \PHPUnit_Framework_TestCase
+class ConfigTest extends \PHPUnit\Framework\TestCase
 {
     public function testYaml()
     {
