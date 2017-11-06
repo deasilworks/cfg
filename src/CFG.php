@@ -28,7 +28,6 @@ namespace deasilworks\CFG;
 use Monolog\Formatter\JsonFormatter;
 use Monolog\Handler\NullHandler;
 use Monolog\Logger;
-use Predis;
 use Symfony\Component\Yaml\Yaml;
 
 /**
@@ -52,7 +51,6 @@ class CFG
      * @var array
      */
     private $loggers = [];
-
 
     /**
      * @param $channel string
@@ -89,6 +87,7 @@ class CFG
     {
         if (file_exists($filePath)) {
             $this->loadYaml(file_get_contents($filePath));
+
             return $this;
         }
 
