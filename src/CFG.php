@@ -25,9 +25,6 @@
 
 namespace deasilworks\CFG;
 
-use Monolog\Formatter\JsonFormatter;
-use Monolog\Handler\NullHandler;
-use Monolog\Logger;
 use Symfony\Component\Yaml\Yaml;
 
 /**
