@@ -48,35 +48,6 @@ class CFG
     private $pathStore = [];
 
     /**
-     * @var array
-     */
-    private $loggers = [];
-
-    /**
-     * @param $channel string
-     *
-     * @return Logger
-     */
-    public function getLogger($channel = self::class)
-    {
-        $channel = (string) $channel;
-
-        if (!$this->loggers[$channel]) {
-            $level = $this->get('deasilworks.cfg.log_debug') ? Logger::DEBUG : Logger::WARNING;
-
-            $redisHandler = new NullHandler($level);
-
-//            $formatter = new JsonFormatter('4klift');
-//            $redisHandler->setFormatter($formatter);
-
-            $this->loggers[$channel] = new Logger($channel);
-            $this->loggers[$channel]->pushHandler($redisHandler);
-        }
-
-        return $this->loggers[$channel];
-    }
-
-    /**
      * Load a YAML file.
      *
      * @param $filePath
